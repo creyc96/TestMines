@@ -1,9 +1,7 @@
 package com.creyc.test.data
 
 
-import android.telecom.Call
 import io.reactivex.Observable
-import retrofit2.http.Url
 
 
 class SearchRepository (private val apiService: BashImApiService){

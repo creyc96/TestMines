@@ -26,6 +26,7 @@ class SplashPresenter : MvpPresenter<SplashView>() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnComplete {
                     viewState.endChecking()
+                    Log.e("qwerty", ans)
                     if (ans.contains("https://"))
                         viewState.changeFragmentToWebView(ans)
                     else

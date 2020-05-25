@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.*
 import android.webkit.*
 import android.webkit.WebChromeClient.FileChooserParams
@@ -122,21 +123,15 @@ class WebViewFragment : Fragment() {
     inner class MyChromeClient : WebChromeClient() {
 
         override fun onShowFileChooser(view: WebView, filePath: ValueCallback<Array<Uri>>, fileChooserParams: FileChooserParams): Boolean {
-
             filePathCallback = filePath
-
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            intent.putExtra(Intent.EXTRA_TITLE, "Image Chooser")
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                val intent = Intent(Intent.ACTION_GET_CONTENT)
                 intent.addCategory(Intent.CATEGORY_OPENABLE)
                 intent.type = "*/*"
-                startActivityForResult(
-                    Intent.createChooser(intent, "File Browser"),
-                    REQUEST_CODE
-                )
+                startActivityForResult(intent, REQUEST_CODE)
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
-                val intent = fileChooserParams.createIntent()
                 startActivityForResult(intent, REQUEST_CODE)
             }
             return true

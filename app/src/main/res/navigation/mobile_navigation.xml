@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.creyc.test.fragmets.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_minesSweeperFragment"
+            app:destination="@id/minesSweeperFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <argument
+            android:name="url_from_splash"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/minesSweeperFragment"
+        android:name="com.creyc.test.fragmets.MinesSweeperFragment"
+        android:label="MinesSweeperFragment" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.creyc.test.fragmets.WebViewFragment"
+        android:label="WebViewFragment" />
+</navigation>

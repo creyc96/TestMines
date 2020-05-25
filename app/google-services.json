@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "307410172555",
+    "firebase_url": "https://minessweeper-27b5c.firebaseio.com",
+    "project_id": "minessweeper-27b5c",
+    "storage_bucket": "minessweeper-27b5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307410172555:android:3e8033f73145a2a608728e",
+        "android_client_info": {
+          "package_name": "com.creyc.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307410172555-6eam1t9bpdmev8q59prlfl68i5c5m711.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.creyc.test",
+            "certificate_hash": "1fd3fcfcd3d3dbd14d657056a492354cc0182842"
+          }
+        },
+        {
+          "client_id": "307410172555-tqe4993ejj6i1i3oac6bdahvgplimt7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmW400lgBGmH6X4pidYoB30S5jDr_bMrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307410172555-tqe4993ejj6i1i3oac6bdahvgplimt7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
